@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.header { width: 100%; padding: 20px 0; text-align: center; position: relative; border-bottom: 1px solid #BEBEBE; }
+.header .title { position: absolute; left: 10px; top: 10px; }
+
+.footer { margin-top: 10px; text-align: right; }
+.footer > span { margin-right: 30px; }
+
+.wrap-content { height: auto; min-height: 400px; border: 1px solid red; }

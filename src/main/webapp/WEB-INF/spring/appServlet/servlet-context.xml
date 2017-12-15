@@ -27,6 +27,8 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	
 	<beans:bean name="Constants" class="com.es.web.common.Constants" />
+	<beans:bean name="RECrypto" class="com.es.web.common.RECrypto" />
+	<beans:bean name="AjaxResponse" class="com.es.web.common.AjaxResponse" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->

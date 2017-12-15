@@ -24,3 +24,16 @@ body {
    margin: 0 auto;
    min-width: 1280px;
 }
+
+input[type="text"] { padding: 3px; }
+input[type="password"] { padding: 3px; }
+
+input.w100 { width: 100px; }
+input.w200 { width: 200px; }
+input.w300 { width: 300px; }
+
+button { padding: 12px 36px; border-radius: 6px; background: none; border: none; cursor: pointer; font-weight: bold; }
+button.blue { background: #2080D0; color: #FFFFFF; }
+button.sky { background: #30C0FF; color: #FFFFFF; }
+button.orange { background: #FF8000; color: #FFFFFF; }
+button.red { background: #FF0000; color: #FFFFFF; }

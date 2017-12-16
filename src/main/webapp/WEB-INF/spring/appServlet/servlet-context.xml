@@ -27,8 +27,9 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	
 	<beans:bean name="Constants" class="com.es.web.common.Constants" />
-	<beans:bean name="RECrypto" class="com.es.web.common.RECrypto" />
-	<beans:bean name="AjaxResponse" class="com.es.web.common.AjaxResponse" />
+	<beans:bean name="RECrypto" class="com.es.web.common.util.RECrypto" />
+	<beans:bean name="AjaxResponse" class="com.es.web.common.util.AjaxResponse" />
+	<beans:bean name="REStringUtils" class="com.es.web.common.util.REStringUtils" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
@@ -42,19 +43,19 @@
 
 	<!-- EightStarsWebAOP -->
 	<aop:aspectj-autoproxy />
-	<beans:bean id="GlobalAOP" class="com.es.web.common.GlobalAOP" />
+	<beans:bean id="GlobalAOP" class="com.es.web.common.inject.GlobalAOP" />
 
 	<!-- RunEnglish Inteceptors exclude : all - resources / include pages -->
 	<interceptors>
 		<interceptor>
 			<mapping path="/**"></mapping>
-			<exclude-mapping path="/resources/**" />
-			<exclude-mapping path="/include/**" />
-			<exclude-mapping path="/download/**" />
-			<exclude-mapping path="/upload/**" />
-			<exclude-mapping path="/*/ajax/**" />
-			<exclude-mapping path="/favicon.ico" />
-			<beans:bean class="com.es.web.common.GlobalInterceptor"
+				<exclude-mapping path="/resources/**" />
+				<exclude-mapping path="/include/**" />
+				<exclude-mapping path="/download/**" />
+				<exclude-mapping path="/upload/**" />
+				<exclude-mapping path="/*/ajax/**" />
+				<exclude-mapping path="/favicon.ico" />
+			<beans:bean class="com.es.web.common.inject.GlobalInterceptor"
 				name="GlobalInterceptor"></beans:bean>
 		</interceptor>
 	</interceptors>

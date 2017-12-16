@@ -1,4 +1,4 @@
-package com.es.web.common;
+package com.es.web.common.util;
 
 import java.security.MessageDigest;
 
@@ -32,5 +32,10 @@ public class RECrypto {
 		}
 		return hexString.toString();
 	}
+	
+	// 비밀번호 값 얻기 위해서 임시 사용
+//	public static void main(String[] args) {
+//		System.out.println(new RECrypto().encrypt("1qazXSW@"));
+//	}
 
 }

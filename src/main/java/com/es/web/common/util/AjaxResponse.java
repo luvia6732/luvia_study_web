@@ -1,4 +1,4 @@
-package com.es.web.common;
+package com.es.web.common.util;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -15,18 +15,30 @@
    	<script type="text/javascript">
    		$(document).ready(function() {
    			
+   			$('#mbrName').keydown( function(e) {
+   				if(e.keyCode == 13) {
+   					$('#mbrPw').focus();
+   				}
+   			});
+   			
+   			$('#mbrPw').keydown( function(e) {
+   				if(e.keyCode == 13) {
+   					$('#loginBtn').click();
+   				}
+   			});
+   			
    			$('#loginBtn').click( function() {
-   				var studentId = $('#studentId').val();
-   				var studentPw = $('#studentPw').val();
+   				var mbrName = $('#mbrName').val();
+   				var mbrPw = $('#mbrPw').val();
    				
-   				if ( isEmpty(studentId) ) {
+   				if ( isEmpty(mbrName) ) {
    					alert('아이디 입력');
-   					$('#studentId').focus();
+   					$('#mbrName').focus();
    					return;
    				}
-   				if ( isEmpty(studentPw) ) {
+   				if ( isEmpty(mbrPw) ) {
    					alert('비밀번호 입력');
-   					$('#studentPw').focuse();
+   					$('#mbrPw').focus();
    					return;
    				}
    				
@@ -39,12 +51,17 @@
    				
    				$.ajax({
    					url : '/main/ajax/login',
-   					data : 'studentId = ' + studentId + '&studentPw = ' + studentPw,
+   					data : 'mbrName=' + mbrName + '&mbrPw=' + mbrPw,
    					type : 'post',
    					cache : false,
    					success : function( data ) {
+   						if( data.resCode != '0000' ) {
+   							alert( data.resMsg );
+   							return;
+   						}
    						console.log( data.resCode );
    						console.log( data.resMsg );
+   						
    					}, error : function( e ) {
    						alert("SERVER-ERROR");
    					}
@@ -63,12 +80,12 @@
 		<div class="loginDiv">
 			<ul>
 				<li>
-					<span>아이디: </span>
-					<input type="text" class="w200 no-spacing" name="studentId" id="studentId" maxlength="20px" />
+					<span>닉네임: </span>
+					<input type="text" class="w200 no-spacing" name="mbrName" id="mbrName" maxlength="20px" />
 				</li>
 				<li>
 					<span>패스워드: </span>
-					<input type="password" class="w200" name="studentPw" id="studentPw" maxlength="20px" />
+					<input type="password" class="w200" name="mbrPw" id="mbrPw" maxlength="20px" />
 				</li>
 				<li>
 					<button class="sky" id="loginBtn">로그인</button>

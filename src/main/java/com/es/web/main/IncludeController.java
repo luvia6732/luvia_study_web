@@ -19,7 +19,6 @@ public class IncludeController {
 	 */
 	@RequestMapping(value = "/header", method=RequestMethod.GET)
 	public String header() throws Exception {
-		log.info("HEADER CONTROLLER");
 		
 		return "/include/header";
 	}
@@ -31,7 +30,6 @@ public class IncludeController {
 	 */
 	@RequestMapping(value = "/footer", method=RequestMethod.GET)
 	public String footer() throws Exception {
-		log.info("FOOTER CONTROLLER");
 		
 		return "/include/footer";
 	}

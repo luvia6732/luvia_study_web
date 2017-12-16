@@ -1,4 +1,4 @@
-package com.es.web.common;
+package com.es.web.common.inject;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import com.es.web.common.Constants;
 
 public class GlobalInterceptor extends HandlerInterceptorAdapter {
 	

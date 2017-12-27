@@ -20,7 +20,7 @@ public class AjaxResponse {
 	public synchronized ResponseEntity<Map<String, Object>> getExceptionResponse( String exceptionMsg ) {
 		resultMap = new HashMap<String, Object>();
 		resultMap.put("resCode", "9000");
-		resultMap.put("resMsg",exceptionMsg);
+		resultMap.put("resMsg", exceptionMsg);
 		return new ResponseEntity<Map<String, Object>>(resultMap, HttpStatus.OK);
 	}
 	

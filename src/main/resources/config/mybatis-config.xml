@@ -15,5 +15,6 @@
 	<!-- SQL Definition :: file include -->
 	<mappers>
 		<mapper resource="sql/MainMapper.xml" />
+		<mapper resource="sql/IncludeMapper.xml" />
 	</mappers>
 </configuration>

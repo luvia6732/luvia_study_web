@@ -45,7 +45,7 @@
 	<aop:aspectj-autoproxy />
 	<beans:bean id="GlobalAOP" class="com.es.web.common.inject.GlobalAOP" />
 
-	<!-- RunEnglish Inteceptors exclude : all - resources / include pages -->
+	<!-- EightStars Inteceptors exclude : all - resources / include pages -->
 	<interceptors>
 		<interceptor>
 			<mapping path="/**"></mapping>

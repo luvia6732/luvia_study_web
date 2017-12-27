@@ -22,7 +22,6 @@ public class GlobalInterceptor extends HandlerInterceptorAdapter {
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView mav) throws Exception {
 		mav.addObject("CONSTANTS", constants);
-		log.info("GLOBAL INTERCEPTOR");
 	}
 	
 	

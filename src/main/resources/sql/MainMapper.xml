@@ -5,34 +5,5 @@
       "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
       
 <mapper namespace="MainMapper">
-
-	<!-- 
-		로그임 검증을 위한 멤버 아이디가 존재하는지 확인
-	 -->
-	<select id="isExistsMbrName" parameterType="String" resultType="String">
-		SELECT
-			MBR_NAME
-		FROM
-			TBL_MEMBER
-		WHERE
-			MBR_NAME = #{mbrName}
-	</select>
 	
-	<!-- 
-		로그인 검증을 위한 학생 VO 기본정보 조회
-	 -->
-	<resultMap type="MemberVO" id="getMbrLoginVO_Result">
-		<result property="mbrSeq" column="MBR_SEQ"/>
-		<result property="mbrBlockYn" column="MBR_BLOCK_YN"/>
-	</resultMap>
-	<select id="getMbrLoginVO" parameterType="MemberVO" resultMap="getMbrLoginVO_Result">
-		SELECT
-			MBR_SEQ,
-			MBR_BLOCK_YN
-		FROM
-			TBL_MEMBER
-		WHERE
-			MBR_NAME = #{mbrName}
-			AND MBR_PW = #{mbrPw}	
-	</select>
 </mapper>

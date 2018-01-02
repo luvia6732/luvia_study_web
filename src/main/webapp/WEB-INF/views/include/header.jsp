@@ -15,20 +15,21 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">eightStar</a>
+					<a class="navbar-brand" href="/">
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>eightStar</a>
 				</div>
 				<c:if test="${empty LoginInfo}">			
 				<div id="navbar" class="navbar-collapse collapse">
 					<form class="navbar-form navbar-right">
 					<div class="form-group">
-						<label for="mbrName" class="sr-only">Nickname</label>
-						<input type="text" id="mbrName" name="mbrName" maxlength="20px"
-							class="form-control" placeholder="Nickname">
+							<label for="mbrName" class="sr-only">Nickname</label>
+							<input type="text" id="mbrName" name="mbrName" maxlength="20px"
+								class="form-control" placeholder="Nickname">
 					</div>
-					<div class="form-group">		
-						<label for="mbrPw" class="sr-only">Password</label>
-						<input type="password" id="mbrPw" name="mbrPw" maxlength="20px"
-							class="form-control" placeholder="Password">
+					<div class="form-group">	
+							<label for="mbrPw" class="sr-only">Password</label>
+							<input type="password" id="mbrPw" name="mbrPw" maxlength="20px"
+								class="form-control" placeholder="Password">
 					</div>		
 					<button type="button" class="btn btn-primary" id="loginBtn">Sign in</button>
 					</form>

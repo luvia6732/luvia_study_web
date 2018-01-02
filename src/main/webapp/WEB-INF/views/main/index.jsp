@@ -20,35 +20,63 @@
    	<!-- Custom CSS -->
    	<link href="/resources/css/navbar.css" rel="stylesheet">
    	<link href="/resources/css/jumbotron-narrow.css" rel="stylesheet">
+   	<link href="/resources/css/menubar.css" rel="stylesheet">
    	   	
 </head>
 <body>
 	<c:import url="/include/header"/>
-	<!-- div로 구성할지, table로 구성할지 고민해보기.
-	div 구성시 각 메뉴에 hover이벤트 발생시 직관적으로 알아보기 쉬운 style 적용이 가능하지만
-	구현하기가 귀찮고........
-	table은 그 반대 -->
-	<div class="table-responsive">
-		<table class="table table-condensed">
-			<tr class="text-center">
-				<td class="active">목록1</td>
-				<td class="active">목록2</td>
-				<td class="active">목록3</td>
-				<td class="active">목록4</td>
-				<td class="active">목록5</td>
-				<td class="active">목록6</td>
-				<td class="active">목록7</td>
-				<td class="active">목록8</td>
-			</tr>
-		</table>
+	<c:import url="/include/menubar"/>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="/resources/image/theme1.jpg" class="img-responsive img-rounded">
+				<!-- 이미 하단 자막 넣기
+				<div class="carousel-caption">
+					<h3>Title</h3>
+					<p>Lorem Ipsum Dolar Sitt</p>
+				</div> -->
+			</div>
+
+			<div class="item">
+				<img src="/resources/image/theme2.jpg" class="img-responsive img-rounded">
+				<!-- 이미 하단 자막 넣기
+				<div class="carousel-caption">
+					<h3>Title</h3>
+					<p>Lorem Ipsum Dolar Sitt</p>
+				</div> -->
+			</div>
+
+			<div class="item">
+				<img src="/resources/image/theme3.jpg" class="img-responsive img-rounded">
+				<!-- 이미 하단 자막 넣기
+				<div class="carousel-caption">
+					<h3>Title</h3>
+					<p>Lorem Ipsum Dolar Sitt</p>
+				</div> -->
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
 	</div>
-	<div class="jumbotron">
-		<h1>이번주의 공지사항</h1>
-		<p>한줄 간단한 공지사항이 들어갈 공간이데 일단 크기가 얼마나 되야될지 몰라서 텍스트 내용을 막 늘려서 적어보고 있긴해</p>
-		<p>
-			<a class="btn btn-lg btn-primary" href="#" role="button">보러가기 &raquo;</a>
-		</p>
-	</div>
+
+
 	<c:import url="/include/footer"/>
 </body>
 </html>

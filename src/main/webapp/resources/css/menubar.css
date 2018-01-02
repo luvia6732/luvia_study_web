@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#main-menu-bar {
+	max-width: 100%;
+}
+
+#main-menu-bar > div {
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-menu-bar p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 98%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-radius: 15px;
+}
+
+#main-menu-bar p:hover {
+	background-color: #eee;
+}
+
+#menubar-notice p {
+	background-color: #ccffff;
+}
+
+

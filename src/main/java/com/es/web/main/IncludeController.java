@@ -87,16 +87,27 @@ public class IncludeController extends CommonController {
 	 * @throws Exception
 	 */
 	@ResponseBody
-	@RequestMapping(value = "/header/ajax/logout", method=RequestMethod.GET, produces="application/json; charset=utf-8")
+	@RequestMapping(value = "/header/ajax/logout", method=RequestMethod.POST, produces="application/json; charset=utf-8")
 	public  ResponseEntity<Map<String, Object>> logout( HttpSession session ) throws Exception {
-				
-		try {
-			session.invalidate();			
-		} catch(Exception e) {
-			return ajaxResponse.getExceptionResponse(e.getMessage());
+		long sessionChk = (Long) session.getAttribute("mbrSeq");		
+		if (sessionChk == 0L) {
+			return ajaxResponse.getExceptionResponse("이미 로그아웃 했어.");
+		} else {
+			session.invalidate();
+			return ajaxResponse.getSuccessResponse();
 		}
-		return ajaxResponse.getSuccessResponse();
 		
+	}
+	
+	/**
+	 * MENUBAR INCLUDE
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/menubar", method=RequestMethod.GET)
+	public String menubar() throws Exception {
+		
+		return "/include/menubar";
 	}
 	
 	/**

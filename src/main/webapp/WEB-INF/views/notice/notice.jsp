@@ -19,14 +19,20 @@
    	<script type="text/javascript" src="/resources/js/common.js"></script>   	
    	<!-- Custom CSS -->
    	<link href="/resources/css/navbar.css" rel="stylesheet">
-   	<link href="/resources/css/jumbotron-narrow.css" rel="stylesheet">
+   	<link href="/resources/css/jumbotron-narrow.css" rel="stylesheet">   	
+   	<link href="/resources/css/menubar.css" rel="stylesheet">
    	   	
 </head>
 <body>
-	<c:import url="/include/header"/>
+	<c:import url="/include/header"/>	
+	<c:import url="/include/menubar"/>
 	
-	<div>
-		<h1>이 페이지는 테스트용 임시 페이지1 입니다.</h1>
+	<div class="jumbotron">
+		<h1>이번주의 공지사항</h1>
+		<p>한줄 간단한 공지사항이 들어갈 공간이데 일단 크기가 얼마나 되야될지 몰라서 텍스트 내용을 막 늘려서 적어보고 있긴해</p>
+		<p>
+			<a class="btn btn-lg btn-primary" href="#" role="button">보러가기 &raquo;</a>
+		</p>
 	</div>
 	
 	<c:import url="/include/footer"/>

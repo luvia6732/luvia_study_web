@@ -57,20 +57,18 @@ $(document).ready(function() {
 	});
 	
 	$('#logoutBtn').click(function() {
-		var mbrName = $('#hd-mbrName').val();
 		
 		$.ajax({
 			url : '/include/header/ajax/logout',
-			data : 'mbrName=' + mbrName,
-			type : 'get',
+			data : '',
+			type : 'post',
 			cache : false,
 			success : function(data) {
 				if (data.resCode != '0000') {
 					alert(data.resMsg);
 					return;
 				}
-				console.log(data.resCode);
-				console.log(data.resMsg);
+				alert( '정상적으로 로그아웃 했어.' )
 				location.reload();
 
 			},
